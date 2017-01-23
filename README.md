@@ -1,8 +1,8 @@
 # nodejs-sandbox
 
 ## Installation
-`npm install` - to install dependecies
-`sudo npm install -g nodemon` - to install nodemon globally
+* `npm install` - to install dependecies
+* `sudo npm install -g nodemon` - to install nodemon globally
 
 ## Usage
 * `node hello-world.js` - simple hello world
