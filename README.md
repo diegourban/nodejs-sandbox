@@ -1,6 +1,10 @@
 # nodejs-sandbox
 
+## Requirements
+* MySQL
+
 ## Installation
+* `mysql -u root -p -h localhost nodejs_sandbox < nodejs_sandbox.sql` - to import the initial data
 * `npm install` - to install dependecies
 * `sudo npm install -g nodemon` - to install nodemon globally
 
