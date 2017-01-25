@@ -10,9 +10,17 @@ module.exports = function(app) {
 			    return;
 			}
 
-			res.render('products/list', {
-				lista : result
+			res.format({
+				html: function() {
+					res.render('products/list', {
+						lista : result
+					});
+				},
+				json: function() {
+					res.json(result);
+				}
 			});
+			
 		});
 
 		connection.end();
