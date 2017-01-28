@@ -19,9 +19,9 @@ var client = http.request(configs, function(res) {
 });
 
 var produto = {
-	titulo: 'more about node',
-	descricao: 'node, javascript and a little about http',
-	preco: 100
+	title: 'more about node',
+	description: 'node, javascript and a little about http',
+	price: 100
 };
 
 client.end(JSON.stringify(produto));

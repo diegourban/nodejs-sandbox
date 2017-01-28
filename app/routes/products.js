@@ -1,13 +1,12 @@
 module.exports = function(app) {
 
-	app.get('/products', function(req, res) {
+	app.get('/products', function(req, res, next) {
 		var connection = app.infra.connectionFactory();
 		var productDAO = new app.infra.ProductDAO(connection);
 
 		productDAO.list(function(err, result) {
 			if (err) {
-				console.error('error connecting: ' + err.stack);
-			    return;
+				return next(err);
 			}
 
 			res.format({
@@ -20,7 +19,7 @@ module.exports = function(app) {
 					res.json(result);
 				}
 			});
-			
+
 		});
 
 		connection.end();
@@ -33,8 +32,8 @@ module.exports = function(app) {
 	app.post('/products', function(req, res) {
 		var product = req.body;
 
-		req.assert('titulo', 'Title is required').notEmpty();
-		req.assert('preco', 'Invalid format').isFloat();
+		req.assert('title', 'Title is required').notEmpty();
+		req.assert('price', 'Invalid format').isFloat();
 
 		var errors = req.validationErrors();
 		if(errors) {
