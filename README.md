@@ -19,7 +19,9 @@ Sandbox project to study and play around with Node.js.
 * `node client-test-get.js` - to simulate a client get (app must be started)
 * `node client-test-post.js` - to simulate a client post (app must be started)
 
-## Heroku
+## Extra - Heroku
 * `heroku apps:create nodejs-sandbox-heroku` - to create the heroku app
-* `heroku addons:create cleardb:ignite` - to add MySQL
+* `heroku addons:create cleardb:ignite` - to create MySQL addon
 * `heroku config` - to check the configs
+* `mysql -h <heroku_host> -u <heroku_user> -p` - to connect to heroku's mysql, you may also need to create the table
+* `git push heroku master` - to deploy to heroku
