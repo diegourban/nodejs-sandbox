@@ -18,3 +18,8 @@ Sandbox project to study and play around with Node.js.
 * `nodemon app` - to start the app monitoring changes with nodemon
 * `node client-test-get.js` - to simulate a client get (app must be started)
 * `node client-test-post.js` - to simulate a client post (app must be started)
+
+## Heroku
+* `heroku apps:create nodejs-sandbox-heroku` - to create the heroku app
+* `heroku addons:create cleardb:ignite` - to add MySQL
+* `heroku config` - to check the configs

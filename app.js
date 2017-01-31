@@ -6,6 +6,8 @@ app.set('io', io);
 
 var port = process.env.PORT || 3000;
 
-http.listen(port, function() {
-	console.log('Server up and running');
+var server = http.listen(port, function() {
+	var host = server.address().address;
+  var port = server.address().port;
+	console.log('Server up and running at http://%s:%s', host, port);
 });
