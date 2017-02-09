@@ -9,7 +9,11 @@
   "author": "diegourban",
   "license": "ISC",
   "dependencies": {
+    "b": "^2.0.1",
+    "body-parser": "^1.16.0",
     "consign": "^0.1.2",
-    "express": "^4.14.1"
+    "express": "^4.14.1",
+    "express-validator": "^3.1.2",
+    "mysql": "^2.13.0"
   }
 }
