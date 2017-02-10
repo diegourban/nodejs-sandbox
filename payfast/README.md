@@ -21,11 +21,19 @@
 ## Usage
 * `nodemon index.js` - to start the server
 
-`curl http://localhost:3000/pagamentos -X POST -v -H "Content-type: application/json" -d '{
+`curl -X POST http://localhost:3000/pagamentos -v -H "Content-type: application/json" -d '{
   "forma_de_pagamento" : "payfast",
   "valor" : 10,
   "moeda" : "BRL",
   "descricao" : "criando um pagamento"
 }'; echo`
 
-`curl http://localhost:3000/pagamentos -X POST -v -H "Content-type: application/json" -d @pagamento_sample.json; echo`
+`curl -X POST http://localhost:3000/pagamentos -v -H "Content-type: application/json" -d @files/pagamento.json; echo`
+
+`curl -X POST http://localhost:3000/pagamentos -v -H "Content-type: application/json" -d @files/pagamentocartao.json; echo`
+
+`curl -X PUT http://localhost:3000/pagamentos/2 -v`
+
+`curl -X DELETE http://localhost:3000/pagamentos/3 -v`
+
+'curl -X POST http://localhost:3000/correios/calculo-prazo -H "Content-type: application/json" -d @files/dados-entrega.json'
