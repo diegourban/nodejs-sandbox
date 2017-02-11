@@ -36,4 +36,10 @@
 
 `curl -X DELETE http://localhost:3000/pagamentos/3 -v`
 
-'curl -X POST http://localhost:3000/correios/calculo-prazo -H "Content-type: application/json" -d @files/dados-entrega.json'
+`curl -X POST http://localhost:3000/correios/calculo-prazo -H "Content-type: application/json" -d @files/dados-entrega.json`
+
+`node util/fileReader.js` - to read and write a file from using a buffer
+
+`node util/streamFileReader.js` - to read and write a file from using stream
+
+`curl -X POST http://localhost:3000/upload/imagem --data-binary @files/image.jpg -H "Content-type: application/octet-stream" -H "filename: image.jpg" -v`
