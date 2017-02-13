@@ -3,6 +3,7 @@
 ## Requirements
 * NodeJS
 * NPM
+* Memcached
 
 ## Installation
 * `npm install`
@@ -43,3 +44,5 @@
 `node util/streamFileReader.js` - to read and write a file from using stream
 
 `curl -X POST http://localhost:3000/upload/imagem --data-binary @files/image.jpg -H "Content-type: application/octet-stream" -H "filename: image.jpg" -v`
+
+`curl -v http://localhost:3000/pagamentos/1`;
