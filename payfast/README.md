@@ -46,3 +46,5 @@
 `curl -X POST http://localhost:3000/upload/imagem --data-binary @files/image.jpg -H "Content-type: application/octet-stream" -H "filename: image.jpg" -v`
 
 `curl -v http://localhost:3000/pagamentos/1`;
+
+`node cluster.js` - to start slave apps
